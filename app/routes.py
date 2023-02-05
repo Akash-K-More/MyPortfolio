@@ -21,8 +21,8 @@ def about():
 
 @app.route("/download_cv", methods = ["POST","GET"])
 def download_cv():
-    path = os.getcwd()
-    path += "\\app\static\Akash-K-More-Resume.pdf"
+    # path = os.getcwd()
+    path = "\\app\static\Akash-K-More-Resume.pdf"
     return send_file(path, as_attachment=True)
 
 @app.route("/projects",methods = ["POST","GET"])
