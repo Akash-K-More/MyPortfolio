@@ -1,0 +1,5 @@
+Hospital Managment System
+Python, Tkinter, SQL
+The Hospital management system came about to address the specific need of assisting hospitals to speed up their processes.
+https://source.unsplash.com/500x600/?Hospitals Technology
+C:\Users\ADMIN\Desktop\Portfolio\static\zip

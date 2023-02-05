@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/css/about.css">
+    <link rel="stylesheet" href="static/css/service.css">
+    <title>Services | @Coder</title>
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
+        <a href="/" class="navbar-brand" style="font-size: 30px;">@Coder</a>
+        <div class="container">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse mt-sm-20 navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item last-item">
+                        <a href="/projects" class="nav-link">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/service" class="nav-link active">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/blog" class="nav-link">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <form action="/service/send_text" method="post">
+        <aside style="width: 38%; float: left;">
+            <img src="https://source.unsplash.com/500x600/?Technology Tech Coding Computer Engineering" alt="">
+        </aside>
+        <div class="container">
+            <h4><label for=""><b>Hire Me..</b></label><br></h4>
+                <label for=""><b>Organisation/ Employer Name</b></label>
+                <input type="text" placeholder="Enter Organisation Name" name="cname" required>
+                <br>
+                <label for=""><b>Email</b></label>
+                <input type="email" placeholder="Enter Email For Contact" name="cemail" required>
+                <br>
+                <label for=""><b>Job/ Work Name</b></label>
+                <input type="text" placeholder="Enter Job Name" name="workname" required>
+                <br>
+                <label for=""><b>Location</b></label>
+                <input type="text" placeholder="Enter Job Location" name="clocation" required>
+                <br>
+                <label for=""><b>Job/ Work Description</b></label>
+                <textarea rows="2" placeholder="Write a job description" name="workdesc"
+                    style="resize: none; width:100%; margin-bottom: 10px" required></textarea>
+                <br>
+                <button type="submit">Submit</button><br>
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+Blog Website
+Python, HTML, CSS
+The system we have developed allows users to create their own blog.
+https://source.unsplash.com/500x600/?Blog Websites
+C:\Users\ADMIN\Desktop\Portfolio\static\zip

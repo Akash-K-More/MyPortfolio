@@ -1,0 +1,81 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/css/about.css">
+<!--    <link rel="stylesheet" href="static/css/main.css">-->
+    <link rel="stylesheet" href="static/css/project.css">
+    <title>Projects | @Coder</title>
+</head>
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
+        <a href="/" class="navbar-brand" style="font-size: 30px;">@Coder</a>
+        <div class="container">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse mt-sm-20 navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item last-item">
+                        <a href="/projects" class="nav-link active">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/service" class="nav-link">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/blog" class="nav-link">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+            <aside style="width: 38%; float: left;">
+                <img src='{{dict_project["img_path"]}}' alt="">
+            </aside>
+            <div class="container">
+                <h4><label for=""><b>Title:</b></label><br></h4>
+                <h4 style="margin-left: 10px; margin-bottom: 20px;">{{dict_project["title"]}}</h4>
+                <label for=""><b>Languages Used :-</b></label><br>
+                <p>{{dict_project["lang"]}}</p>
+                <br>
+                <label for=""><b>Description :-</b></label><br>
+                <p>{{dict_project["desc"]}}</p>
+                <br>
+                <button>Download</button><br>
+                <hr>
+
+                <div id='comment' class="">
+                    <div class="container-comment">
+                        {% for i in comments%}
+                        <div class="comment-left">
+                            <img src="static/img/avtar.png" alt="avtar" height="20px">
+                        </div>
+                        <div class="comment-right">
+                            <strong>{{i[2]}}</strong> Wrote:
+                        <p>{{i[3]}}</p>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr style="margin: 5px 0; opacity:0.5">
+      {% endfor %}
+                    </div>
+
+                    <hr>
+                    <div class="container-comment">
+                        <form action="/add_pcomment" method="post">
+                        <label for="uname"><b>Name</b></label>
+                        <input type="text" placeholder="" name="uname" required>
+                        <br>
+                        <label for="comment"><b>Password</b></label>
+                        <input type="text" placeholder="" name="comment" required>
+                        <br>
+                        <button type="submit">Add Comment</button><br>
+                        </form>
+                    </div>
+
+        </div>
+                </div>
+            </div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+Loan Prediction System
+Python, HTML, CSS
+ompany wants to automate the loan eligibility process (real-time) based on customer detail provided while filling out online application forms. These details are Gender, Marital Status, Education, number of Dependents, Income, Loan Amount, Credit History, and others.
+https://source.unsplash.com/500x600/?Loan ecommerce money
+C:\Users\ADMIN\Desktop\Portfolio\static\zip

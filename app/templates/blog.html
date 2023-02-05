@@ -1,0 +1,68 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Welcome | @Coder Blogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="static/css/main.css">
+  
+</head>
+
+<body>
+  <!-- Add your site or application content here -->
+  <header id="main-header">
+    <div class="container">
+      <div id="branding">
+        <img src="static/img/logo.png" alt="@coder" width="100px">
+        <h2>@Coder</h2>
+      </div> <!--branding-->
+      <div class="clearfix"></div>
+      <div id="main-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/service">Services</a></li>
+          <li><a href="" class="active">Blogs</a></li>
+        </ul>
+      </div>
+    </div> <!--container-->
+  </header>
+
+  <div class="container">
+    <section id="content">
+      <article>
+        <header>
+          <h2>Facebook Launches friend tracking feature</h2>
+        </header>
+        <img src="https://source.unsplash.com/960x520/?Facebook" alt="Blog1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora fugit ab hic earum, necessitatibus voluptate qui. Earum magnam distinctio velit nemo numquam quis? Quae fugit corporis fugiat possimus in eum!</p>
+        <footer>
+<!--          <input type="hidden" value="1001" id="blog_id" name="blog_id"></input>-->
+<!--          <a class="readmore" href="{{url_for('blog_single',blog_id = blog_id)}}">Read More</a>-->
+          <form action="/blog_single", method="post">
+            <input type="hidden" value="1001" id="blog_id" name="blog_id"></input>
+            <button class="readmore" type="submit">Read More</button>
+          </form>
+        </footer>
+      </article>
+      <article>
+        <header>
+          <h2>Hii Second Blog</h2>
+        </header>
+        <img src="https://source.unsplash.com/960x520/?Technology" alt="Blog1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora fugit ab hic earum, necessitatibus voluptate qui. Earum magnam distinctio velit nemo numquam quis? Quae fugit corporis fugiat possimus in eum!</p>
+        <footer>
+          <form action="/blog_single", method="post">
+            <input type="hidden" value="1002" id="blog_id2" name="blog_id"></input>
+            <button class="readmore" type="submit">Read More</button>
+          </form>
+        </footer>
+      </article>
+    </section>
+  </div><!--Container-->
+  
+</body>
+</html>

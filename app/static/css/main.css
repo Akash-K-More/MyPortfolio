@@ -1,0 +1,290 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+a {
+  color: #15346FB3;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+  overflow: hidden;
+}
+
+
+#main-header {
+  height: 80px;
+  background: white;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .3)
+}
+
+#branding {
+  float: left;
+  /* width: 50%; */
+}
+
+#branding h2 {
+  margin-top: 29px;
+  margin-left: -10px;
+  padding: 0;
+  color: #15346FB3;
+  padding: 5px 0 0 90px;
+}
+
+#branding img {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+}
+
+#main-nav {
+  width: 50%;
+  Padding-top: 12px;
+  position: relative;
+  left: 350px;
+}
+
+#main-nav ul {
+  float: left;
+  margin-left: 20px;
+}
+
+#main-nav li {
+  float: left;
+  padding: 3px 5px 0 5px;
+  margin: 19px 10px;
+  font-size: 20px;
+  font-weight: bold;
+  list-style: none;
+  color: #333
+}
+
+#main-nav a {
+  color: #333;
+}
+
+#main-nav a:hover {
+  color: #15346FB3;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+
+}
+
+#content {
+  float: left;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 0 20px 20px 20px;
+}
+
+article {
+  border-bottom: 2px dotted #ccc;
+  padding: 10px 0 20px 0;
+}
+
+article img {
+  width: 50%;
+  margin: 20px 25%;
+}
+
+article h2 {
+  margin: 0;
+  padding-top: 10px;
+}
+
+article .readmore {
+  background: #f4f4f4;
+  color: #000;
+  width: 97%;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+article .readmore:hover {
+  background: #15346FB3;
+}
+
+#comment {
+  margin-top: 20px;
+}
+
+.comment-left {
+  float: left;
+  width: 6%;
+}
+
+.comment-left img {
+  width: 100%;
+}
+
+.comment-right {
+  float: right;
+  width: 90%;
+}
+
+.comment-form {
+  margin-top: 10px;
+  padding: 5px 20px 10px 20px;
+  background: #15346FB3;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.comment-form input[type="text"],
+.comment-form input[type="email"] {
+  border: #ccc 1px solid;
+  border-radius: 5px;
+  height: 20px;
+  padding: 3px;
+  width: 97%;
+}
+
+.comment-form textarea {
+  border: #ccc 1px solid;
+  border-radius: 5px;
+  padding: 3px;
+  width: 97%;
+}
+
+.add-form input[type="text"] {
+  border: #ccc 1px solid;
+  border-radius: 5px;
+  height: 20px;
+  padding: 3px;
+  width: 97%;
+}
+
+.add-form input select {
+  border: #ccc 1px solid;
+  border-radius: 5px;
+  height: 40px;
+  padding: 3px;
+  width: 98%;
+}
+
+.add-form textarea {
+  border: #ccc 1px solid;
+  border-radius: 5px;
+  padding: 3px;
+  width: 97%;
+}
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (max-width: 900px) {
+
+  /* Style adjustments for viewports that meet the condition */
+  #branding h1 {
+    display: none;
+  }
+
+  #branding {
+    width: 20%;
+  }
+
+  #main-nav {
+    width: 80%;
+  }
+
+  #content {
+    float: none;
+    width: 91%;
+  }
+
+  #sidebar {
+    float: none;
+    width: 100%;
+  }
+
+  #main-footer .footer-left,
+  #main-footer .footer-right {
+    float: none;
+    width: 100%;
+  }
+
+  #main-footer .copy {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  #main-nav li {
+    padding: 3px 3px 0 3px;
+    margin: 0 5px;
+    font-size: 13px;
+    list-style: none;
+  }
+
+  #content {
+    float: none;
+    width: 87%;
+  }
+}
+
+.active {
+    color: #15346FB3 !important;
+}
+
+.button {
+  color: #15346FB3;
+  background: #f1f1f1;
+  padding: 4px;
+  margin: 10px 0px 10px 10px;
+  border: 2px solid transparent;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-color: #15346FB3;
+  cursor: pointer;
+  width: 20%;
+}
+
+.button:hover{
+  color: #f1f1f1;
+  background: #15346FB3;
+}

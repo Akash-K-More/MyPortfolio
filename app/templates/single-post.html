@@ -1,0 +1,67 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Blog | @Coder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="static/css/main.css">
+</head>
+
+<body>
+
+  <!-- Add your site or application content here -->
+  <header id="main-header">
+    <div class="container">
+      <div id="branding">
+        <img src="static/img/logo.png" alt="@coder" width="100px">
+        <h2>@Coder</h2>
+      </div> <!--branding-->
+      <div class="clearfix"></div>
+      <div id="main-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/projects">Project</a></li>
+          <li><a href="/service">Services</a></li>
+          <li><a href="/blog" class="active">Blogs</a></li>
+        </ul>
+      </div>
+    </div> <!--container-->
+  </header>
+
+  <div class="container">
+  <section id="content">
+    <article>
+      <header>
+        <h2>{{blog_param["title"]}}</h2>
+      </header>
+      <img src='{{blog_param["img_path"]}}' alt="Blog1">
+      <p>{{blog_param["desc"]}}</p>
+    </article>
+    <footer id="comment">
+      {% for i in comments%}
+      <div class="comment-left">
+        <img src="static/img/avtar.png" alt="avtar">
+      </div>
+      <div class="comment-right">
+        <strong>{{i[2]}}</strong> Wrote:
+        <p>{{i[3]}}</p>
+      </div>
+      <div class="clearfix"></div>
+      <hr style="margin: 5px 0; opacity:0.5">
+      {% endfor %}
+
+      <div class="clearfix"></div>
+      <div class="comment-form">
+        <h3>Leave Comment</h3>
+        <form action="/add_comment" method="post">
+          <p><label for="uname">Name: </label><input type="text" id="uname" name="uname"></p>
+          <p><label for="comment">Comment: </label><textarea name="comment"></textarea></p>
+          <p><button class="button" type="submit">Add Comment</button></p>
+        </form>
+      </div>
+    </footer>
+  </section>
+</div>
+</body>
+</html>
