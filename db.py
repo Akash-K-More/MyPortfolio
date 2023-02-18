@@ -1,11 +1,6 @@
 import mysql.connector
 from login import *
 
-# host="localhost"
-# user="root"
-# password="Akash@1234"
-# database="portfolio"
-
 db = mysql.connector.connect(
     host=host,
     user=user,
