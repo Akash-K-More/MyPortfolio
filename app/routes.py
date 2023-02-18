@@ -1,7 +1,7 @@
 from flask import Flask, render_template, send_file, redirect, request
 import os
 import db
-import telegram
+import send_emails
 
 
 from app import app
@@ -68,12 +68,9 @@ def service_send_text():
         job_name = request.form.get("workname")
         job_location = request.form.get("clocation")
         job_desc = request.form.get("workdesc")
-        msg = employer_name + employer_email + job_name + job_location + job_desc
+        
+        send_emails.send_service_mail(employer_name, employer_email, job_name, job_location, job_desc)
 
-        telegram.bot_sendtext(msg)
-
-        # print(employer_name, employer_email, job_name, job_location, job_desc)
-    
     return redirect("/service")
 
 @app.route("/blog",methods = ["POST","GET"])
@@ -110,5 +107,14 @@ def add_comment():
 @app.route("/contact",methods = ["POST","GET"])
 def contact():
     return render_template("index.html")
+
+@app.route("/contact/send_mail",methods = ["POST","GET"])
+def contact_mail():
+    cname = request.form.get('cname')
+    cemail = request.form.get('cemail')
+    subject = request.form.get('sub')
+    message = request.form.get('msg')
+    send_emails.send_contact_mail(cname, cemail, subject, message)
+    return redirect('/')
 
 
